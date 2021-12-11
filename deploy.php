@@ -31,7 +31,7 @@ task('deploy:secrets', function () {
 });
 
 host('myapp.io')
-  ->hostname('104.248.172.220')
+  ->hostname('152.70.71.83')
   ->stage('production')
   ->user('root')
   ->set('deploy_path', '/var/www/my-app');
@@ -39,7 +39,7 @@ host('myapp.io')
 host('staging.myapp.io')
   ->hostname('104.248.172.220')
   ->stage('staging')
-  ->user('root')
+  ->user('ubuntu')
   ->set('deploy_path', '/var/www/my-app-staging');
 
 after('deploy:failed', 'deploy:unlock');
