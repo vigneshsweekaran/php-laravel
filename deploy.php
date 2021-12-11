@@ -33,7 +33,7 @@ task('deploy:secrets', function () {
 host('myapp.io')
   ->hostname('152.70.71.83')
   ->stage('production')
-  ->user('root')
+  ->user('ubuntu')
   ->set('deploy_path', '/var/www/my-app');
 
 host('staging.myapp.io')
